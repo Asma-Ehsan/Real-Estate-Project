@@ -17,6 +17,10 @@ mongoose.connect(process.env.MONGO).then(() => {
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
+
 app.use(express.json()); //middleware to allow json as an input of the server
 
 app.use(cookieParser()); //middleware to allow cookies as an input of the server
