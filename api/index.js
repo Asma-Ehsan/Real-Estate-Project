@@ -21,9 +21,9 @@ app.use(express.json()); //middleware to allow json as an input of the server
 
 app.use(cookieParser()); //middleware to allow cookies as an input of the server
 
-app.listen(`${port}`, () => {
-  console.log('API server is running on port 3000!!');
-});
+// app.listen(`${port}`, () => {
+//   console.log('API server is running on port 3000!!');
+// });
 
 //we use /api/user as the base route for all user-related routes,
 app.use('/api/user', userRouter ); 
@@ -43,3 +43,5 @@ app.use((err, req, res, next) => {
     statusCode,
   })
 })
+
+export default app;
