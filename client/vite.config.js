@@ -13,7 +13,7 @@ export default defineConfig({
       // Redirect all requests starting with /api to the backend server running on localhost:3000
       "/api" : {
         target: "http://localhost:3000",
-
+        changeOrigin: true,
         //false means it won’t check SSL certificates. 
         secure: false,
       }
