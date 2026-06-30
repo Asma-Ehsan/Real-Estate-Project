@@ -1,6 +1,10 @@
 {
     "rewrites": [
         {
+            "source": "/api/(.*)",
+            "destination": "https://real-estate-project-puce-sigma.vercel.app/"
+        },
+        {
             "source": "/(.*)",
             "destination": "/index.html"
         }
